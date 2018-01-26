@@ -1,6 +1,6 @@
 # 极验证sdk
 
-`go get -insecure github.com/lattecake/geetest`
+`go get github.com/lattecake/geetest`
 
 ## 使用
 
