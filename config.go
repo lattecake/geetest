@@ -18,7 +18,6 @@ func Init(captchaId string, privateKey string, proxy string) {
 	config.CaptchaId = captchaId
 	config.PrivateKey = privateKey
 	if proxy != "" {
-		//config.Proxy = "http://10.131.30.18:8000"
 		config.Proxy = proxy
 	}
 }
