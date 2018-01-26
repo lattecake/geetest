@@ -46,6 +46,7 @@ func send(method string, httpUrl string, params io.Reader) (body []byte, err err
 	}
 	client := &http.Client{
 		Transport: transport,
+		Timeout:   time.Duration(time.Second * 1),
 	}
 	request, err := http.NewRequest(strings.ToUpper(method), httpUrl, params)
 	request.Header.Set("Content-Type", "application/x-www-form-urlencoded")
