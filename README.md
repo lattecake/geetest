@@ -1,15 +1,15 @@
-# 极验证sdk
+# gee test sdk
 
 `go get github.com/lattecake/geetest`
 
-## 使用
+## useing
 
 ```go
 geeCaptcha = geetest.New("your captcha Id", "your private Key", "http_proxy or nil")
 
 ```
 
-### 生成
+### pre process
 
 ```go
 var req geetest.PreProcessRequest
@@ -21,7 +21,7 @@ res, err := geeCaptcha.PreProcess(req)
 ```
 
 
-### 验证
+### validate
 
 ```go
 req := geetest.ValidateRequest{
