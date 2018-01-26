@@ -52,9 +52,10 @@ func (c *basicGeeTestService) Validate(req ValidateRequest) (ok bool, err error)
 		return
 	}
 
-	slice = md5.Sum([]byte(res.Seccode))
+	slice = md5.Sum([]byte(req.SecCode))
+
 	ok = hex.EncodeToString(slice[:]) == res.Seccode
-	return true, nil
+	return ok, nil
 }
 
 func (c *basicGeeTestService) PreProcess(req PreProcessRequest) (res PreProcessResponse, err error) {
@@ -77,3 +78,4 @@ func (c *basicGeeTestService) PreProcess(req PreProcessRequest) (res PreProcessR
 
 	return
 }
+
