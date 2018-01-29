@@ -33,6 +33,11 @@ req := geetest.ValidateRequest{
 }
 
 if ok, err = geeCaptcha.Validate(req); err != nil {
+	fmt.println(err.Error())
+	return
+}
+
+if !ok {
 	return
 }
 ```
