@@ -32,6 +32,9 @@ req := geetest.ValidateRequest{
 	RemoteAddr: "your client ip",
 }
 
+var ok bool
+var err error
+
 if ok, err = geeCaptcha.Validate(req); err != nil {
 	fmt.println(err.Error())
 	return
